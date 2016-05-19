@@ -28,3 +28,5 @@ from ._gadgets import MaybeEntry
 from ._selectors import ChoiceSelector
 from ._selectors import JustSelector
 from ._selectors import MaybeSelector
+
+from ._version import __version__
