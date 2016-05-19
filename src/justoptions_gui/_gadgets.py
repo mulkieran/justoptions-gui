@@ -206,8 +206,11 @@ class ChoiceEntry(Entry):
             else:
                 self.VAR.set(self._CHOICES[value])
         else:
-            self.CHOICES = \
-               Tkinter.Listbox(self.FRAME, selectmode=Tkinter.SINGLE)
+            self.CHOICES = Tkinter.Listbox(
+               self.FRAME,
+               exportselection=0,
+               selectmode=Tkinter.SINGLE
+            )
             for (index, (choice, choice_name)) in enumerate(choices):
                 self.CHOICES.insert(index, choice_name)
                 self._CHOICES[choice] = index
